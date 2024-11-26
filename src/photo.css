@@ -59,8 +59,9 @@ ul span {
 }
 .img-preview {
     /* max-width: 80%; */
-    width:5rem;
-    height: 5rem;
+    width:80%;
+    height: 7rem;
+    display: cover;
     border: 1px solid red;
     position: absolute;
 }
