@@ -1,41 +1,86 @@
-import { useState } from "react"
+import women from '../assets/women.jpg';
+import { useState, useRef } from 'react';
+import './photo.css';
 
 const Photo = () => {
     const [preview, setPreview] = useState(null);
+    const fileInputRef = useRef(); // Ref for the file input element
 
     const handleImageUpload = (event) => {
-      const file = event.target.files[0]; // Get the selected file
-      if (file) {
-        // Create a preview URL for the image
-        const previewUrl = URL.createObjectURL(file);
-        setPreview(previewUrl);
-      }
+        const file = event.target.files[0]; // Get the selected file
+        if (file) {
+            const previewUrl = URL.createObjectURL(file); // Generate preview URL
+            setPreview(previewUrl);
+        }
     };
-    return (
-        <div>
-          <h2>Upload an Image</h2>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleImageUpload}
-          />
-          {preview && (
-            <div style={{ marginTop: '20px' }}>
-              <h3>Preview:</h3>
-              <img
-                src={preview}
-                alt="Preview"
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                  border: '1px solid #ccc',
-                  padding: '5px',
-                }}
-              />
-            </div>
-          )}
-        </div>
-      );
-}
 
-export default Photo
+    const handleButtonClick = () => {
+        if (fileInputRef.current) {
+            fileInputRef.current.click(); // Trigger file input click programmatically
+        }
+    };
+
+    return (
+        <section>
+            <h1>
+                <span>I AM LENDING A VOICE TO SUPPORT</span>
+                <br /> ENDING OF VIOLENCE AGAINST WOMEN AND GIRLS.
+            </h1>
+            <ul>
+                <li className='header'>
+                    <h2>
+                        16 DAYS OF ACTIVISM
+                        <span>
+                            <br />
+                            AGAINST GENDER BASED VIOLENCE (WOMEN AND
+                            GIRLS)
+                        </span>
+                    </h2>
+                </li>
+                <li className='image'>
+                    {/* Hidden file input */}
+                    <input
+                        ref={fileInputRef}
+                        type='file'
+                        accept='image/*'
+                        onChange={handleImageUpload}
+                        style={{ display: 'none' }}
+                    />
+                    {/* Button to trigger file upload */}
+                    <button
+                        className='upload-btn'
+                        onClick={handleButtonClick}
+                    >
+                        Upload Image
+                    </button>
+                    {preview && (
+                        <img
+                            src={preview}
+                            alt='Preview'
+                            className='img-preview'
+                            // style={{
+                            //     maxWidth: '100%',
+                            // }}
+                        />
+                    )}
+                    <input
+                        type='text'
+                        placeholder='Enter Name'
+                        className='Name'
+                    />
+                </li>
+                <li className='year'>
+                    <p>2024</p>
+                </li>
+            </ul>
+            <div className='logo-div'>
+                <img src={women} alt='logo' className='logo' />
+            </div>
+            <section>
+                <h3>THE FEDERAL MINISTRY OF WOMEN AFFAIRS</h3>
+            </section>
+        </section>
+    );
+};
+
+export default Photo;
