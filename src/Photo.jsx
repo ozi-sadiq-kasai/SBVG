@@ -21,7 +21,7 @@ const Photo = () => {
     };
 
     return (
-        <section>
+        <section className='wrapper'> 
             <h1>
                 <span>I AM LENDING A VOICE TO SUPPORT</span>
                 <br /> ENDING OF VIOLENCE AGAINST WOMEN AND GIRLS.
@@ -30,7 +30,7 @@ const Photo = () => {
                 <li className='header'>
                     <h2>
                         16 DAYS OF ACTIVISM
-                        <span>
+                        <span className='span'>
                             <br />
                             AGAINST GENDER BASED VIOLENCE (WOMEN AND
                             GIRLS)
@@ -69,14 +69,11 @@ const Photo = () => {
                         className='Name'
                     />
                 </li>
-                <li className='year'>
-                    <p>2024</p>
-                </li>
             </ul>
             <div className='logo-div'>
                 <img src={women} alt='logo' className='logo' />
             </div>
-            <section>
+            <section className='footer'>
                 <h3>THE FEDERAL MINISTRY OF WOMEN AFFAIRS</h3>
             </section>
         </section>

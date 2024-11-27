@@ -1,11 +1,11 @@
-section {
-    border: 1px solid red;
+.wrapper {
+    background-color: rgba(250, 242, 242, 0.493);
+    height: 100vh;
 }
 
 h1 {
     padding: 3rem 2rem;
     font-size: 18px;
-    border: 1px solid red;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -17,10 +17,10 @@ h1 span {
 }
 
 ul {
-    padding: 1rem 0.5rem;
-    gap: 5px;
+    padding: 1rem;
+    gap: 10px;
+    flex-direction: column;
     display: flex;
-    border: 1px solid green;
     color: orangered;
     width: 100vw;
     justify-content: space-between;
@@ -28,29 +28,15 @@ ul {
     list-style: none;
 }
 
-ul span {
-    /* font-size: 10px; */
+h2 {
+    color: rgb(255, 99, 42);
+    text-align: center;
+    font-size: 1.2rem;
 }
-
-.image {
-}
-
-.year {
-}
-
-.header {
-    flex: 2;
-    h2 {
-        color: rgb(255, 99, 42);
-        text-align: center;
-        font-size: 1rem;
-    }
-    span {
-        font-size: 0.5rem;
-    }
+.span {
+    font-size: 0.6rem;
 }
 .image {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,17 +44,19 @@ ul span {
     position: relative;
 }
 .img-preview {
-    /* max-width: 80%; */
-    width:80%;
+    width: 90%;
     height: 7rem;
+    top: -0rem;
     display: cover;
-    border: 1px solid red;
     position: absolute;
 }
 .Name {
     border: none;
     outline: none;
-    margin-top: 1rem;
+    margin-top: 5rem;
+    padding: 3px 3px 3px 18px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .year {
     flex: 1;
@@ -80,6 +68,7 @@ ul span {
 }
 .logo {
     width: 3rem;
+    padding: 0.5rem 0;
 }
 .upload-btn {
     padding: 10px 20px;
@@ -93,4 +82,15 @@ ul span {
 
 .upload-btn:hover {
     background-color: #e55332;
+}
+.footer {
+    padding: 1rem;
+    background-color: #e55332;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5rem 5rem 0 0;
+    h3 {
+        font-weight: 100;
+    }
 }
