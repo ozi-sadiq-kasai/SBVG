@@ -47,7 +47,7 @@ h2 {
     width: 90%;
     height: 7rem;
     top: -0rem;
-    display: cover;
+    display: contain;
     position: absolute;
 }
 .Name {
