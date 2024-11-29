@@ -21,7 +21,7 @@ const Photo = () => {
     };
 
     return (
-        <section className='wrapper'> 
+        <section className='wrapper'>
             <h1>
                 <span>I AM LENDING A VOICE TO SUPPORT</span>
                 <br /> ENDING OF VIOLENCE AGAINST WOMEN AND GIRLS.
@@ -46,13 +46,7 @@ const Photo = () => {
                         onChange={handleImageUpload}
                         style={{ display: 'none' }}
                     />
-                    {/* Button to trigger file upload */}
-                    <button
-                        className='upload-btn'
-                        onClick={handleButtonClick}
-                    >
-                        Upload Image
-                    </button>
+
                     {preview && (
                         <img
                             src={preview}
@@ -70,6 +64,14 @@ const Photo = () => {
                     />
                 </li>
             </ul>
+            <div className='btn-div'>
+                <button
+                    className='upload-btn'
+                    onClick={handleButtonClick}
+                >
+                    Upload Image
+                </button>
+            </div>
             <div className='logo-div'>
                 <img src={women} alt='logo' className='logo' />
             </div>
